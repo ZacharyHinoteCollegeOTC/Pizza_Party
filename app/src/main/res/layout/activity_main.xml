@@ -29,65 +29,46 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="208dp"
         android:layout_marginEnd="240dp"
-        android:labelFor="@id/hungry_radio_group"
+        android:labelFor="@id/spinner"
         android:text="@string/how_hungry"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="360dp"
+        android:layout_height="74dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/hungry_radio_group"
-        android:layout_width="363dp"
-        android:layout_height="320dp"
+    <Button
+        android:id="@+id/calc_button"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="71dp"
         android:layout_marginEnd="16dp"
-        android:orientation="vertical"
+        android:onClick="calculateClick"
+        android:text="@string/calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.577">
-
-        <RadioButton
-            android:id="@+id/light_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/light" />
-
-        <RadioButton
-            android:id="@+id/medium_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/medium" />
-
-        <RadioButton
-            android:id="@+id/ravenous_radio_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ravenous" />
-
-        <Button
-            android:id="@+id/calc_button"
-            android:layout_width="match_parent"
-            android:layout_height="63dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="667dp"
-            android:onClick="calculateClick"
-            android:text="@string/calculate" />
-
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.164" />
 
     <TextView
         android:id="@+id/num_pizzas_text_view"
